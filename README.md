@@ -12,7 +12,22 @@ AI 增强功能是：由云端大模型阅读笔记全文，自动生成一段�
 关键技术点：ArkTS + ArkUI（Stage 模型）、Navigation 多页面路由、RDB 关系型数据库持久化、
 Preferences 键值配置、@kit.NetworkKit 调用云端 LLM、hilog 全链路日志与脱敏。
 
+## 系统架构
+
+![智记 SmartNote 系统架构](docs/架构图.png)
+
+工程按职责分为五层，上下层单向依赖，跨层调用被禁止（页面不直接写 SQL）：
+
+| 层 | 主要内容 |
+|---|---|
+| 表现层 | 列表 / 编辑 / 详情 / AI 助手 / 设置 五个页面，NoteCard / TagChip / StateView 三个通用组件 |
+| 业务逻辑层 | AiService（云端调用、解析校验、错误归类）、SettingsService（配置读写）、AppEvents（跨页刷新广播） |
+| 数据访问层 | NoteRepository（增删改查、LIKE 检索）、DbHelper（RdbStore 单例与建表） |
+| 数据存储层 | RDB `smartnote.db` 的 `notes` 表 + Preferences `smartnote_settings` |
+| 公共支撑层 | Constants、Logger（含脱敏）、LocalConfig、数据模型 |
+
 ---
+
 
 ## 一、开发环境与 SDK 版本
 
