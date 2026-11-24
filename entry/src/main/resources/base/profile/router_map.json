@@ -1,0 +1,24 @@
+{
+  "routerMap": [
+    {
+      "name": "NoteEdit",
+      "buildFunction": "NoteEditBuilder",
+      "pageSourceFile": "src/main/ets/pages/NoteEditPage.ets"
+    },
+    {
+      "name": "NoteDetail",
+      "buildFunction": "NoteDetailBuilder",
+      "pageSourceFile": "src/main/ets/pages/NoteDetailPage.ets"
+    },
+    {
+      "name": "AiAssist",
+      "buildFunction": "AiAssistBuilder",
+      "pageSourceFile": "src/main/ets/pages/AiAssistPage.ets"
+    },
+    {
+      "name": "Settings",
+      "buildFunction": "SettingsBuilder",
+      "pageSourceFile": "src/main/ets/pages/SettingsPage.ets"
+    }
+  ]
+}

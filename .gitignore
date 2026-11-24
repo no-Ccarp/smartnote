@@ -1,0 +1,18 @@
+# 构建产物与本地环境
+/node_modules
+/oh_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+**/.test
+/.appanalyzer
+*.hap
+*.hsp
+
+# 本机私有密钥：entry/src/main/ets/common/LocalConfig.ets 中 apiKey 保持空串，
+# 请勿把真实密钥提交到本仓库。

@@ -1,0 +1,8 @@
+# Define project specific obfuscation rules here.
+# You can include the obfuscation configuration files in the current module's build-profile.json5.
+#
+# 本项目为课程作业，release 构建同样关闭混淆，便于评审阅读代码与核对关键实现。
+-enable-property-obfuscation
+-enable-toplevel-obfuscation
+-enable-filename-obfuscation
+-enable-export-obfuscation
